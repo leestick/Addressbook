@@ -12,15 +12,15 @@ def app(request):
 
 
 def test_group_add_unittest(app):
-    app.user_login(username="admin", password="secret")
+    app.session.user_login(username="admin", password="secret")
     app.create_group(name="Group1", header="Header1", footer="Footer1")
-    app.logout()
+    app.session.logout()
 
 
 def test_empty_group_add_unittest(app):
-    app.user_login(username="admin", password="secret")
+    app.session.user_login(username="admin", password="secret")
     app.create_group(name="", header="", footer="")
-    app.logout()
+    app.session.logout()
 
 
 
