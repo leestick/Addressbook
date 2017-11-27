@@ -1,0 +1,130 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://localhost/addressbook"
+    },
+    {
+      "type": "sendKeysToElement",
+      "locator": {
+        "type": "name",
+        "value": "user"
+      },
+      "text": "\\undefined"
+    },
+    {
+      "type": "sendKeysToElement",
+      "locator": {
+        "type": "name",
+        "value": "pass"
+      },
+      "text": "\\undefined"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "name",
+        "value": "user"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//form[@id='LoginForm']/input[3]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "name",
+        "value": "new"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "name",
+        "value": "group_name"
+      },
+      "text": "Gro"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "name",
+        "value": "group_name"
+      },
+      "text": "Group2"
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='content']/form/select//option[1]"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "name",
+        "value": "group_header"
+      },
+      "text": "Header2"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "name",
+        "value": "group_footer"
+      },
+      "text": "Footer2"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "name",
+        "value": "submit"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "groups"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Logout"
+      }
+    },
+    {
+      "type": "sendKeysToElement",
+      "locator": {
+        "type": "name",
+        "value": "user"
+      },
+      "text": "\\undefined"
+    },
+    {
+      "type": "sendKeysToElement",
+      "locator": {
+        "type": "name",
+        "value": "pass"
+      },
+      "text": "\\undefined"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
