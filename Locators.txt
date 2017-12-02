@@ -1,0 +1,43 @@
+--------------------
+xpath
+--------------------
+Все ссылки
+//a
+
+//*[@id='action']
+
+Текст:
+//span[text()='Поиск']
+
+Любой атрибут speciality
+*[@speciality]
+
+Элемент, у которого нет элементов degree or award, но есть pubkication
+author[not(degree or award) and publication]
+
+
+xpath локаторы: 
+/body/.. — родитель бади, тобишь тег штмль
+
+В чем отличие xpath от css, в икспасе мы можем ходить снизу вверх, а в цсс только сверху вниз. //
+//a[text()=’some value’] — найти ссылку с текстом some value
+author[last-name [position()=1]= «Bob»] — найти элемент author у которого есть элемент last-name и у last-name это первая позиция
+//div[@id=’header’] — элемент див с айди хедер
+//div[1] — первый див
+//div[position()=1] — как я понимаю все равно что //div[1]
+//div[2 and 3] — второй и третий див
+
+В xpath отношения элементов определяют оси
+// — означает что ищем по всем вложенным элементам
+/descendant:div[@id=’header’] — находит всех потомков дива с айди хеадер
+
+book/*/last-name — находим элемент бук после котрого идет любой элемент а за ним сразу идет элемент ластнейм
+*[@specialty] — любой элемент с атрибутом specialty
+author[first-name][3] — элемент с названием author у которого есть потомок элемент first-name и он третий
+author[not(degree or award) and publication] — находим элемент author у котрого нет потомка элемента degree или award, но есть элемент publication
+ancestor::author[parent::book][1] — находим предка у которого есть название элемента author и у которого есть непорсдетсвенный родитель book и выбираем первую позицию
+
+//a[text() =»Preferences»][ancestor::*[@id=’header’]] — найти ссылку Preferences в верхнем меню (идем сверху вниз, вначале пишем ссылку с текстом Preferences
+//*[@id =’action_list_curent’]//span[@class=’next_action_name’][following-sibling::*/a[contains(@href,’contexts’) and text() =’Offline’]] — Найти все задачи в списке current с контекстом Offline
+
+
